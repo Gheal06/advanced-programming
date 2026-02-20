@@ -1,8 +1,5 @@
-package lab1;
-/**
-
+/*
     Gheorghies Alexandru, 2A1
-
 */
 public class lab1{
     public static void main(String args[]){
