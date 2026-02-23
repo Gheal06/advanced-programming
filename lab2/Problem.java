@@ -1,4 +1,4 @@
-package lab2;
+//package lab2;
 
 public class Problem{
     public static void main(){ /// voi avea in viitor o clasa de main

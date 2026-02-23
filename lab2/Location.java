@@ -1,5 +1,4 @@
-package lab2;
-
+//package lab2;
 public class Location {
     protected String name;
     protected float x, y;

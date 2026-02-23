@@ -1,5 +1,6 @@
-package lab2;
-
+//package lab2;
+//import lab2.Location;
+//import lab2.RoadType;
 public class Road {
     private String name;
     private RoadType type;
