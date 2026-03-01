@@ -1,5 +1,5 @@
 //package lab2;
-public class Location {
+public abstract sealed class Location permits Airport, City{
     protected String name;
     protected float x, y;
     public Location(String name, float x, float y){ /// constructor cu toate proprietatile
@@ -35,13 +35,13 @@ public class Location {
     public String getName(){ /// getter nume
         return new String(this.name);
     }
-    public String toString(){ /// afiseaza name (x: x, y: y)
+    public String toString(){ /// returneaza "name (x: x, y: y)"
         return (new StringBuilder().append(this.name).append("(x:").append(this.x).append(", y:").append(this.y)+")").toString();
     }
     @Override
     public boolean equals(Object oth){ /// override la metoda Object.equals()
         if(oth==null || !(oth instanceof Location)) return false;
-        Road other = (Road) oth;
-        return name.equals(other.getName());
+        Location other = (Location) oth;
+        return name.equals(other.getName()) && this.x==other.x && this.y==other.y;
     }
 }

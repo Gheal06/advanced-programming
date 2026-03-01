@@ -1,5 +1,4 @@
 //package lab2;
-
 public enum RoadType{
     UNSET,
     LOCAL,
