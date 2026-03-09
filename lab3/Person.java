@@ -1,16 +1,23 @@
-public class Person implements Profile{
-    private String name;
+import java.sql.Date;
+import java.util.HashMap;
+public class Person extends ProfileImpl{
+    protected Date birthdate;
+    public Person(){
+        this.relationships=new HashMap<Profile,RelationshipType>();
+    }
     public Person(String name){
         this.name=name;
+        this.relationships=new HashMap<Profile,RelationshipType>();
     }
-    public String getName(){
-        return name;
+    public Person(String name, Date birthdate){
+        this.name=name;
+        this.birthdate=birthdate;
+        this.relationships=new HashMap<Profile,RelationshipType>();
     }
-    public void setName(String s){
-        name=s;
+    public Date getBirthdate(){
+        return birthdate;
     }
-    @Override
-    public int compareTo(Profile oth){
-        return this.name.compareTo(oth.getName());
+    public void setBirthdate(Date d){
+        birthdate=d;
     }
 }
