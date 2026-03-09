@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.sql.Date;
 public class Programmer extends Employee{
     @Override
@@ -13,11 +14,13 @@ public class Programmer extends Employee{
     public Programmer(String name){
         this.name=name;
         skills=new ArrayList<String>();
+        relationships=new HashMap<Profile,RelationshipType>();
     }
     public Programmer(String name, Date birthdate){
         this.name=name;
         this.birthdate=birthdate;
         skills=new ArrayList<String>();
+        relationships=new HashMap<Profile,RelationshipType>();
     }
     public boolean addSkill(String skillName){
         return skills.add(skillName);

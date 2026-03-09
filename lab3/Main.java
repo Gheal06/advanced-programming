@@ -8,12 +8,14 @@ public class Main{
         l.add(new Person("Matei"));
         l.add(new Person("Andrei"));
         l.add(new Person("Stefan"));
+        l.add(new Programmer("Bill"));
+        l.add(new Designer("Steve"));
         l.add(new Company("Microsoft"));
         l.add(new Company("Oracle"));
         l.add(new Company("Anthropic"));
         Collections.sort(l);
         for(Profile p : l){
-            System.out.println(p.getName());
+            System.out.println(p);
         }
     }
     public static void genGraph(SocialNetwork g, int n, int m){
