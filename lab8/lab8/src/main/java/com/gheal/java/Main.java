@@ -47,7 +47,7 @@ public class Main {
         }catch(NumberFormatException ex){
             return;
         }
-        if(h>=2 && w>=2 && h<=15 && w<=15 && speed>=10){
+        if(h>=2 && w>=2 && h<=15 && w<=15){
             stopGenerating();
             preferredMazeHeight=h;
             preferredMazeWidth=w;

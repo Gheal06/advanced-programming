@@ -9,6 +9,9 @@ public class Database {
     private static HikariConfig config = null;
     private static HikariDataSource ds = null;
     private static Connection conn = null;
+    private static final String URL = "jdbc:postgresql://localhost:5432/cities";
+    private static final String USER = "postgres";
+    private static final String PASSWORD = "password";
     private Database() {}
     public static Connection getConnection(){
         if(config == null)

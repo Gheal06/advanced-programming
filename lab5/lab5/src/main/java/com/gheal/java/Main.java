@@ -68,18 +68,18 @@ public class Main {
         }
         return ans;
     }
-    public void advanced(int n, int m, int iterCnt, double density){
+    public void advanced(int n, int m, int iterCnt){
         Random rng=new Random();
         int sumbkt=0, sumheuristic=0;
         boolean[][] sets =new boolean[n][m];
         for(int iter=0;iter<iterCnt;iter++){
             for(int i=0;i<n;i++)
                 for(int j=0;j<m;j++)
-                    sets[i][j]=rng.nextDouble()<density;
+                    sets[i][j]=rng.nextBoolean();
             sumbkt+=bkt(n,m,sets);
             sumheuristic+=heuristic(n,m,sets,10);
         }
-        System.out.println(String.format("Minimum set cover for %d entries, %d tags and %.2f tag density: ",n,m,density));
+        System.out.println(String.format("Minimum set cover for %d entries and %d tags: ",n,m));
         System.out.println(String.format("Bkt average: %.2f | Heuristic average: %.2f | Average error: %.2f%%",
                                                  1.0*sumbkt/iterCnt, 1.0*sumheuristic/iterCnt, 100.0*sumheuristic/sumbkt-100));
     }
@@ -88,7 +88,7 @@ public class Main {
         //app.testCreateSave();
         //app.testLoadView();
         CatalogUtil.initFreemarker();
-        app.advanced(20, 30, 100, 0.1);
+        app.advanced(20, 30, 100);
         app.shell();
     }
 
