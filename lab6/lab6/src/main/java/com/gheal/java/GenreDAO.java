@@ -27,7 +27,7 @@ public class GenreDAO {
         }
         return genreList;
     }
-    public Genre findByName(String name) throws SQLException {
+    public Genre findByName(String name){
         try{
             Connection con = Database.getConnection();
             String sql = "select * from genres where name=?";
@@ -40,7 +40,7 @@ public class GenreDAO {
             return null;
         }
     }
-    public Genre findById(int id) throws SQLException {
+    public Genre findById(int id){
         try{
             Connection con = Database.getConnection();
             String sql = "select * from genres where id=?";

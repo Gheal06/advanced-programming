@@ -1,7 +1,6 @@
 //package lab2;
 import java.util.*;
 
-
 public class Main{
     private static ArrayList<Road> roadInfo = new ArrayList<Road> ();
     private static ArrayList<Integer> roadTo = new ArrayList<Integer> ();
